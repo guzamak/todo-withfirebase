@@ -14,7 +14,7 @@ function Tododetail () {
 
     const settodosdesc = async() => {
         await updateDoc(doc(db,"userData",`${user.uid}`,"todo",`${todos[todoindex].id}`)
-        ,todos[todoindex].doc)
+        ,{description:todos[todoindex].doc.description})
     }
 
     const senddescadd = (e) => {
