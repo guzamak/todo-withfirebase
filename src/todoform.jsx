@@ -22,7 +22,7 @@ function Todoform() {
     }
     const submitform = (e) => {
         e.preventDefault()
-        addDoc(collection(db, "userData", `${user.uid}`, "todo"),//เลขสวย ไม่เป็น id เเบบสุ่ม
+        addDoc(collection(db, "userData", `${user.uid}`, "todo"),
             {
                 title: `${todo.title}`,
                 description: arrayUnion(`${todo.description}`),
